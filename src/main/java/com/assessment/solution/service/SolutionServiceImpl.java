@@ -13,8 +13,8 @@ public class SolutionServiceImpl implements SolutionService {
             lat2 = Math.toRadians(lat2);
             long2 = Math.toRadians(long2);
 
-            double earthRadius = 6371.01;
-            double distance = earthRadius *  Math.acos(Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(long1 - long2));
+            double R = 6371.01;
+            double distance = R *  Math.acos(Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(long1 - long2));
 
 
             return String.format("%.2f", + distance) + "km";

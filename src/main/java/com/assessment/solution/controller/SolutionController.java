@@ -21,7 +21,7 @@ public class SolutionController {
 //    }
 
 
-    @GetMapping("/")
+    @GetMapping("/solution")
     public String calculate(@RequestParam("latitude1") Double latitude1, @RequestParam("longitude1") Double longitude1,
                             @RequestParam("latitude2") Double latitude2, @RequestParam("longitude2") Double longitude2) {
         String result = solutionService.calculateDistance(latitude1, longitude1, latitude2, longitude2);
